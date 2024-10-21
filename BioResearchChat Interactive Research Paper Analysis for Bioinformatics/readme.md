@@ -28,3 +28,44 @@ BioResearchChat is a Streamlit-based application that allows users to upload bio
    ```bash
    git clone https://github.com/yourusername/BioResearchChat.git
    cd BioResearchChat
+
+## Run the Application 
+streamlit run bio_research_chat.py
+
+## Upload PDFs
+
+Go to the sidebar and upload one or more research papers in PDF format.
+Click on "Submit & Process" to extract and process the text.
+
+## Ask Questions
+
+Enter your question in the main text input field and get an answer based on the context from the uploaded documents.
+
+## File Structure
+
+bio_research_chat.py: Main application script.
+vector_store.pkl: Saved vector store file (generated after processing PDFs).
+README.md: Project documentation.
+requirements.txt: List of Python libraries needed for the project.
+
+## Example Questions You Can Ask
+
+"What were the main findings in the study?"
+"Describe the methodology used for genome sequencing."
+"Which genes were associated with the disease in this research?"
+
+## How It Works
+
+Text Extraction: The application reads the content of uploaded PDFs using PyPDF2.
+Text Splitting: Text is divided into chunks of 3,000 characters with a 500-character overlap for better context handling.
+Embedding Creation: BioBERT generates embeddings (vector representations) for each chunk.
+Vector Store: The embeddings and corresponding text chunks are saved in a local vector store for later retrieval.
+Question Processing: When a question is asked, the system searches for the most relevant text chunks based on cosine similarity.
+Answer Generation: The selected chunks are used as context for a BioBERT-based question-answering pipeline.
+
+## Future Enhancements
+
+Integrate Ontologies: Link to biological ontologies (e.g., Gene Ontology) for enriched responses.
+Database Integration: Incorporate external bioinformatics databases (e.g., NCBI, UniProt) for additional context.
+Improved Handling of Large Documents: Implement pagination or section-based processing.
+
