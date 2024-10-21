@@ -69,3 +69,7 @@ Integrate Ontologies: Link to biological ontologies (e.g., Gene Ontology) for en
 Database Integration: Incorporate external bioinformatics databases (e.g., NCBI, UniProt) for additional context.
 Improved Handling of Large Documents: Implement pagination or section-based processing.
 
+## UI
+
+<img width="1470" alt="image" src="https://github.com/user-attachments/assets/1f1a40ba-470e-4401-b4dc-dd7e1b9c0639">
+
